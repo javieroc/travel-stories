@@ -1,0 +1,27 @@
+---
+interface Props {
+  filled?: boolean;
+}
+
+const { filled = false } = Astro.props;
+---
+
+<button class:list={[
+	'bg-gray-50',
+	{'bg-sky-700': filled},
+	'rounded-full',
+	'border-4',
+	'border-sky-700',
+	'text-sky-700',
+	{'text-gray-50': filled},
+	'text-lg',
+	'font-bold',
+	'px-8',
+	'py-2',
+	{'hover:bg-sky-700': !filled},
+	{'hover:text-gray-50': !filled},
+	{'hover:bg-gray-50': filled},
+	{'hover:text-sky-700': filled},
+]}>
+  <slot />
+</button>
