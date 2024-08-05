@@ -1,14 +1,8 @@
 ---
-import Card from "./Card.astro";
+import StoryCard from "./StoryCard.astro";
+import cardImage from '../assets/card-image.jpg';
 ---
 
-<div class="flex flex-wrap gap-8">
-	<Card />
-	<Card />
-	<Card />
-	<Card />
-	<Card />
-	<Card />
-	<Card />
-	<Card />
+<div class="flex flex-wrap gap-4">
+	<StoryCard story={{ image: cardImage.src, title: 'Amazing story title', body: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam ducimus enim distinctio sed consectetur error ipsa illo. Placeat, voluptate ipsum. Fuga deleniti nulla similique minima cumque, quae doloribus rem soluta!'}} />
 </div>

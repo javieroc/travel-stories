@@ -1,0 +1,21 @@
+---
+interface Props {
+	story: {
+		image: string;
+		title: string;
+		body: string;
+	}
+}
+
+const { story } = Astro.props
+---
+
+<div class="max-w-md rounded overflow-hidden shadow-lg">
+  <img class="w-full" src={story.image} alt="Travel Image">
+  <div class="px-6 py-4">
+    <div class="text-sky-700 font-bold text-xl mb-2">{story.title}</div>
+    <p class="text-gray-900 text-base">
+      {story.body}
+    </p>
+  </div>
+</div>
