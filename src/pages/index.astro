@@ -1,7 +1,13 @@
 ---
+import Hero from '../components/Hero.astro';
+import Stories from '../components/Stories.astro';
 import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout title="Travel Stories!">
-	<h1 class="text-white text-5xl">Trave stories project</h1>
+	<Hero />
+	<section class="p-11">
+		<h1 class="text-gray-700 text-4xl font-bold mb-8">Trave stories project</h1>
+		<Stories />
+	</section>
 </Layout>
