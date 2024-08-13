@@ -1,6 +1,15 @@
 ---
 import StoryCard from "./StoryCard.astro";
 import cardImage from '../assets/card-image.jpg';
+import { fetchApi } from '../lib/strapi';
+import type { Story } from '../interfaces/story';
+
+const articles = await fetchApi<Story[]>({
+  endpoint: 'travel-stories',
+  wrappedByKey: 'data',
+});
+
+console.log('articles', articles)
 ---
 
 <div class="flex flex-wrap gap-4">
